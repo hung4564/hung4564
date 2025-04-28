@@ -4,7 +4,7 @@ const fs = require("fs");
 const getQuote = async () => {
 	try {
 		const { data } = await axios.get(
-			"https://quotes.rest/qod?language=en&quot;"
+			"https://quotes.rest/quote/random?language=en&limit=1"
 		);
 		const quote = data.contents.quotes[0].quote;
 		const author = data.contents.quotes[0].author;
